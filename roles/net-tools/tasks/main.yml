@@ -1,52 +1,62 @@
 ---
 # tasks file for net-tools
 - name: Install transport https
-  pkg:
+  package:
+    update_cache: yes
     name: apt-transport-https
     state: latest
 
 - name: Instal ca-certificates
-  pkg:
+  package:
+    update_cache: yes  
     name: ca-certificates
     state: latest
 
 - name: install curl
-  pkg:
+  package:
+    update_cache: yes  
     name: curl
     state: latest
 
 - name: install wget
-  pkg:
+  package:
+    update_cache: yes  
     name: wget
     state: latest
 
 - name: install zip
-  pkg: 
+  package: 
+    update_cache: yes  
     name: zip
     state: latest
 
 - name: install net-tools
-  pkg:
+  package:
+    update_cache: yes  
     name: net-tools
     state: latest
 
 - name: install nano
-  pkg:
+  package:
+    update_cache: yes  
     name: nano
     state: present
 
 - name: install tar
-  pkg:
+  package:
+    update_cache: yes  
     name: tar
     state: latest
 
 - name: install net-cat
-  pkg:
+  package:
+    update_cache: yes  
     name: netcat
     state: latest
 
 - name: install openjdk-8-jdk
-  pkg:
+  package:
+    update_cache: yes  
     name: openjdk-8-jdk
     state: latest    
 ...

@@ -1,6 +1,12 @@
 ---
  - name: install important tools
-   hosts: {{ host }}
-   
+   hosts: "{{ host }}"
+   roles:
+     - net-tools
+   tasks:
+     - name: debug the message
+       debug:
+         msg: test meesage
+       
 
 ...
