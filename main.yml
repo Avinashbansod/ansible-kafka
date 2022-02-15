@@ -1,0 +1,6 @@
+---
+ - name: install important tools
+   hosts: {{ host }}
+   
+
+...
