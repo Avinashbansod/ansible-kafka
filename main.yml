@@ -2,11 +2,6 @@
  - name: install important tools
    hosts: "{{ host }}"
    roles:
-     - net-tools
-   tasks:
-     - name: debug the message
-       debug:
-         msg: test meesage
-       
-
+    # - net-tools
+     - install-zookeeper
 ...
