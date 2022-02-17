@@ -13,6 +13,6 @@ initLimit=10
 syncLimit=5
 # zoo servers
 # these hostnames such as `zookeeper-1` come from the /etc/hosts file
-{% for entry in  servers -%}
-    {{ entry }}
+{% for key, value in servers.items() -%}
+   server.{{ value.id }}={{ value.ip }}:2888:3888
 {% endfor %}
