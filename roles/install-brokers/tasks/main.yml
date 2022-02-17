@@ -1,0 +1,11 @@
+---
+# tasks file for install-brokers
+- name: update the file open limit on the machine
+  shell: |
+    echo "* hard nofile 100000
+  * soft nofile 100000" | sudo tee --append /etc/security/limits.conf
+
+- name: change owner of kafka data directory
+  shell: |
+    chown -R ubuntu:ubuntu /data/kafka
+    

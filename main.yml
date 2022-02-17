@@ -1,6 +1,8 @@
 ---
  - name: install important tools
    hosts: "{{ host }}"
+   vars_files:
+      - vars/all.yml
    roles:
     # - net-tools
      - install-zookeeper
